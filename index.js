@@ -19,6 +19,7 @@ reqFS.addEventListener('click', () => {
   }
   fullscreen.style.display='none';
   main.style.display='block';
+  alert("done");
 });
 
 function isFullscreen() {
