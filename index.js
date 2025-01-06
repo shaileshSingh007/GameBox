@@ -9,17 +9,17 @@ const playCont = document.getElementById('playCont');
 
 
 reqFS.addEventListener('click', () => {
-  
   if (main.requestFullscreen) {
     main.requestFullscreen();
   } else if (main.webkitRequestFullscreen) { // Safari
     main.webkitRequestFullscreen();
   } else if (main.msRequestFullscreen) { // IE/Edge
     main.msRequestFullscreen();
+  } else {
+    alert("Fullscreen mode is not supported on this browser.");
   }
-  fullscreen.style.display='none';
-  main.style.display='block';
-  alert("done");
+  fullscreen.style.display = 'none';
+  main.style.display = 'block';
 });
 
 function isFullscreen() {
