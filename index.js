@@ -1,4 +1,4 @@
-"const reqFS = document.getElementById('reqFS');
+const reqFS = document.getElementById('reqFS');
 const main = document.getElementById('main');
 const fullscreen = document.getElementById('fullscreen');
 const collection = document.getElementById('Collection');
