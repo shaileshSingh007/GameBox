@@ -9,17 +9,24 @@ const playCont = document.getElementById('playCont');
 
 
 reqFS.addEventListener('click', () => {
-  if (main.requestFullscreen) {
-    main.requestFullscreen();
-  } else if (main.webkitRequestFullscreen) { // Safari
-    main.webkitRequestFullscreen();
-  } else if (main.msRequestFullscreen) { // IE/Edge
-    main.msRequestFullscreen();
-  } else {
-    alert("Fullscreen mode is not supported on this browser.");
-  }
-  fullscreen.style.display = 'none';
-  main.style.display = 'block';
+  
+       // Play the video and request fullscreen
+     video.play();
+     if (video.webkitEnterFullscreen) {
+       video.webkitEnterFullscreen(); // iOS Safari fullscreen method
+     } else if (video.requestFullscreen) {
+       video.requestFullscreen();
+     }
+
+ // if (main.requestFullscreen) {
+//    main.requestFullscreen();
+//  } else if (main.webkitRequestFullscreen) { // Safari
+//    main.webkitRequestFullscreen();
+//  } else if (main.msRequestFullscreen) { // IE/Edge
+//    main.msRequestFullscreen();
+//  }
+  fullscreen.style.display='none';
+  main.style.display='block';
 });
 
 function isFullscreen() {
