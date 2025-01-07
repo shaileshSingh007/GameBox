@@ -60,7 +60,15 @@ const gameURL = [
 });
 
 closeGame.addEventListener("click", () => {
+  
+  if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+
   playCont.style.display = "none";
+  video.pause();
   gameFrame.src = ""; // Optional: Clear iframe content
 });
 
