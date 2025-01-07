@@ -127,5 +127,16 @@ header{
   transform:scale(90%);
 }
 
+#hiddenVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 1px; /* Keep the video minimal */
+      height: 1px;
+      opacity: 0;
+      }
+
+
+
 
 
